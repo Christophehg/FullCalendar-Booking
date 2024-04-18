@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
         nowIndicator: true, //Affiche le temps actuel
         resourceAreaWidth: 200, //Largeur Resources
         locale: 'fr', //Langue française
-        headerToolbar: {
+        headerToolbar: { //Bouton header
             left: "prev,next today",
             center: "title",
             right: "resourceTimelineWeek,resourceTimelineMonth,listMonth"
         },
-        buttonText: {
+        buttonText: { //Traduction des textes
             today: 'Aujourd\'hui',
             resourceTimelineWeek: 'Semaine',
             month: 'Mois',
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 slotEventOverlap: false
             },
 
-
+            //Appartement 1 | Tarifs
             {
                 title: "63",
                 start: new Date(y, m, d+1, 0),
@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
             },
 
 
+            //Appartement 1 | Quantité
             {
                 title: "1",
                 start: new Date(y, m, d+2, 0),
@@ -234,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 slotEventOverlap: false
             },
         ],
-        eventContent: function(arg) {
+        eventContent: function(arg) { //Centrer le texte des évènements
         return {
             html: '<div class="fc-content">' +
                     '<div class="fc-title" style="text-align: center;">' + arg.event.title + '</div>' +
@@ -244,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         eventClassNames: 'custom-event-class', //Largeur des events
 
-        eventClick: function(info) { //Click on event
+        eventClick: function(info) { //Click sur l'event
             alert('Event: ' + info.event.title);
         },
     });
@@ -253,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Associer la fonction au clic du bouton
     document.getElementById('toggleResourceWidth').addEventListener('click', function() {
-        // Toggle resource area width
+        // Modification de la largeur de resources
         if (calendar.getOption('resourceAreaWidth') === 0) {
             calendar.setOption('resourceAreaWidth', 200); // Rétablir la largeur par défaut
             document.getElementById('toggleResourceWidth').innerText = "Masquer les ressources";

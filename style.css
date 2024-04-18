@@ -14,7 +14,7 @@ html, body {
 .custom-event-class {
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 0px;
+  border: 0px;  
   border-top: 5px solid; /* Style CSS pour la bordure gauche */
   font-weight: bold;
 }
