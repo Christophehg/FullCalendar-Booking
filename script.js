@@ -16,26 +16,27 @@ document.addEventListener("DOMContentLoaded", function() {
         headerToolbar: { //Bouton header
             left: "prev,next today",
             center: "title",
-            right: "resourceTimelineWeek,resourceTimelineMonth,listMonth"
+            right: "resourceTimelineWeek,resourceTimelineMonth,dayGridMonth"
         },
         buttonText: { //Traduction des textes
             today: 'Aujourd\'hui',
             resourceTimelineWeek: 'Semaine',
             month: 'Mois',
-            list: 'Liste',
+            dayGridMonth: 'Calendrier',
         },
-        initialView: 'resourceTimelineWeek', //Page par defaut
-        views: { //Reccurence de 15jours
-            resourceTimelineWeek: {
+        initialView: 'dayGridMonth', //Page par defaut
+        views: { //Midifier la vue
+            resourceTimelineWeek: { 
                 type: 'resourceTimelineWeek',
-                duration: { days: 15 }
-            }
+                duration: { days: 15 } //Récurrence de 15 jours
+            },
+
         },
 
         slotDuration: { hours: 24 }, //Jour en 24heures
         editable: true, //Drag & Drop
         selectable: true, //Jour clicable
-        showNonCurrentDates: true,
+        showNonCurrentDates: false, //Pas afficher les jours qui ne sont pas dans le mois
         resourceGroupField: 'building', //Catégorie
         resources: [
             { id: '1', building: 'Appartement Paris', title: 'Appartement Paris', eventTextColor: "black"},
