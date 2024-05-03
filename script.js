@@ -66,19 +66,24 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         ],
         eventContent: function (arg) { //Centrer le texte des évènements
-            if (arg.event.start.getDate() <= arg.event.end.getDate()){
+            /*if (arg.event.start.getDate() <= arg.event.end.getDate()){
                 return {
                     html: '<div class="fc-content">' +
-                            '<div class="fc-title" style="text-align: center;">' + 'Check In &emsp;&emsp;&emsp;&emsp;' + arg.event.title + '</div>' +
+                            '<div class="fc-title">' + 'Check In &emsp;&emsp;&emsp;&emsp;' + arg.event.title + '</div>' +
                         '</div>'
                 };
             }else{
                 return {
                     html: '<div class="fc-content">' +
-                            '<div class="fc-title" style="text-align: center;">' + 'Check Out &emsp;&emsp;&emsp;&emsp;' + arg.event.title + '</div>' +
+                            '<div class="fc-title">' + 'Check Out &emsp;&emsp;&emsp;&emsp;' + arg.event.title + '</div>' +
                         '</div>'
                 };
-            }
+            }/*/
+            return {
+                html: '<div class="fc-content">' +
+                        '<div class="fc-title" style="text-align: center;">' + arg.event.title + '</div>' +
+                    '</div>'
+            };
         },
         
         eventClassNames: 'custom-event-class', //Largeur des events
