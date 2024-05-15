@@ -64,6 +64,183 @@ document.addEventListener("DOMContentLoaded", function() {
                 resourceId: 1,
                 slotEventOverlap: false
             },
+            {
+                title: "Cust Airbnb",
+                start: new Date(y, m, d+4, 15),
+                end: new Date(y, m, d+10, 8),
+                borderColor: '#FF5A5F', // Couleur de la bordure
+                allDay: false,
+                backgroundColor: '#FEC0C2',
+                resourceId: 1,
+                slotEventOverlap: false
+            },
+            {
+                title: "Cust Airbnb",
+                start: new Date(y, m, d+11, 15),
+                end: new Date(y, m, d+20, 11),
+                borderColor: '#FF5A5F',
+                allDay: false,
+                backgroundColor: '#FEC0C2',
+                resourceId: 1,
+                slotEventOverlap: false
+            },
+
+            //Appartement 1 | Tarifs
+            {
+                title: "63",
+                start: new Date(y, m, d+1, 0),
+                end: new Date(y, m, d+2, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+            {
+                title: "63",
+                start: new Date(y, m, d+2, 0),
+                end: new Date(y, m, d+3, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+            {
+                title: "63",
+                start: new Date(y, m, d+3, 0),
+                end: new Date(y, m, d+4, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+            {
+                title: "63",
+                start: new Date(y, m, d+4, 0),
+                end: new Date(y, m, d+5, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+            {
+                title: "63",
+                start: new Date(y, m, d+5, 0),
+                end: new Date(y, m, d+6, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+            {
+                title: "63",
+                start: new Date(y, m, d+6, 0),
+                end: new Date(y, m, d+7, 0),
+                allDay: false,
+                resourceId: "1rates",
+                slotEventOverlap: false
+            },
+
+
+            //Appartement 1 | Quantité
+            {
+                title: "1",
+                start: new Date(y, m, d+2, 0),
+                end: new Date(y, m, d+3, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+3, 0),
+                end: new Date(y, m, d+4, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+4, 0),
+                end: new Date(y, m, d+5, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+5, 0),
+                end: new Date(y, m, d+6, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+6, 0),
+                end: new Date(y, m, d+7, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+7, 0),
+                end: new Date(y, m, d+8, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+8, 0),
+                end: new Date(y, m, d+9, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+9, 0),
+                end: new Date(y, m, d+10, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+            {
+                title: "1",
+                start: new Date(y, m, d+10, 0),
+                end: new Date(y, m, d+11, 0),
+                allDay: false,
+                resourceId: "1stay",
+                slotEventOverlap: false
+            },
+
+            //Appartement 2
+            {
+                title: "Cust Airbnb",
+                start: new Date(y, m, d-2, 15),
+                end: new Date(y, m, d+2, 11),
+                borderColor: '#FF5A5F',
+                allDay: false,
+                backgroundColor: '#FEC0C2',
+                resourceId: 2,
+                slotEventOverlap: false
+            },
+            {
+                title: "Customer Booking",
+                start: new Date(y, m, d+2, 13),
+                end: new Date(y, m, d+4, 11),
+                borderColor: '#003580',
+                allDay: false,
+                backgroundColor: '#8DBCFE',
+                resourceId: 2,
+                slotEventOverlap: false
+            },
+            {
+                title: "Customer Booking",
+                start: new Date(y, m, d+4, 15),
+                end: new Date(y, m, d+10, 10),
+                borderColor: '#003580',
+                allDay: false,
+                backgroundColor: '#8DBCFE',
+                resourceId: 2,
+                slotEventOverlap: false
+            },
         ],
         eventContent: function (arg) { //Centrer le texte des évènements
             /*if (arg.event.start.getDate() <= arg.event.end.getDate()){
@@ -78,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             '<div class="fc-title">' + 'Check Out &emsp;&emsp;&emsp;&emsp;' + arg.event.title + '</div>' +
                         '</div>'
                 };
-            }/*/
+            }*/
             return {
                 html: '<div class="fc-content">' +
                         '<div class="fc-title" style="text-align: center;">' + arg.event.title + '</div>' +
