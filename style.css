@@ -12,14 +12,17 @@ html, body {
 }
 
 .custom-event-class {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   border: 0px;  
-  /*border-top: 5px solid; /* Style CSS pour la bordure gauche */
+  border-top: 5px solid; /* Style CSS pour la bordure gauche */
   font-weight: bold;
+  white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte qui dépasse */
 }
 
-/* CSS personnalisé */
+
+/* CSS personnalisé 
 .event-hover {
   position: absolute;
   z-index: 999;
@@ -33,3 +36,4 @@ html, body {
   line-height: 1.4;
   text-align: center;
 }
+*/

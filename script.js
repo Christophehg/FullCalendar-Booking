@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var calendarEl = document.getElementById("calendar");
     var calendar = new FullCalendar.Calendar(calendarEl, { 
         slotLabelFormat: [ //Format TimeLine
-            { weekday: 'short' },
             { day: '2-digit', month: 'short' }, 
         ],
         nowIndicator: true, //Affiche le temps actuel
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             dayGridMonth: 'Calendrier',
             listWeek: 'Liste',
         },
-        initialView: 'listWeek', //Page par defaut
+        initialView: 'resourceTimelineWeek', //Page par defaut
         views: { //Midifier la vue
             resourceTimelineWeek: { 
                 type: 'resourceTimelineWeek',
@@ -43,202 +42,114 @@ document.addEventListener("DOMContentLoaded", function() {
         editable: true, //Drag & Drop
         selectable: true, //Jour clicable
         showNonCurrentDates: false, //Pas afficher les jours qui ne sont pas dans le mois
-        resourceGroupField: 'building', //Catégorie
         resources: [
-            { id: '1', building: 'Appartement Paris', title: 'Appartement Paris', eventTextColor: "black"},
-            { id: '1stay', building: 'Appartement Paris', title: 'Quantité', eventTextColor: "black", eventColor: 'grey', eventBackgroundColor: "#E0E0E0", },
-            { id: '1rates', building: 'Appartement Paris', title: 'Tarifs', eventTextColor: "black", eventColor: 'grey', eventBackgroundColor: "#E0E0E0", },
+            { id: '1', building: 'Appartement Paris', title: 'Appartement Paris', eventTextColor: "black",},
             { id: '2', building: 'Appartement Gueliz', title: 'Appartement Gueliz', eventTextColor: "black" },
-            { id: '2stay', building: 'Appartement Gueliz', title: 'Quantité', eventTextColor: "black", eventColor: 'grey', eventBackgroundColor: "#E0E0E0", },
-            { id: '2rates', building: 'Appartement Gueliz', title: 'Tarifs', eventTextColor: "black", eventColor: 'grey ', eventBackgroundColor: "#E0E0E0", },
+            { id: '3', building: 'Chalet du Lac', title: 'Chalet du Lac', eventTextColor: "black" },
         ],
         events: [
             //Appartement 1
             {
-                title: "Customer Booking",
+                title: "Emily Johnson",
+                description: "Airbnb",
                 start: new Date(y, m, d+2, 11),
-                end: new Date(y, m, d+3, 10),
+                end: new Date(y, m, d+4, 10),
                 borderColor: '#003580', // Couleur de la bordure
                 allDay: false,
-                backgroundColor: '#8DBCFE',
+                backgroundColor: '#AACDFF',
                 resourceId: 1,
                 slotEventOverlap: false
             },
             {
-                title: "Cust Airbnb",
+                title: "Emily Johnson",
+                description: "Airbnb",
                 start: new Date(y, m, d+4, 15),
                 end: new Date(y, m, d+10, 8),
-                borderColor: '#FF5A5F', // Couleur de la bordure
+                borderColor: '#830000', // Couleur de la bordure
                 allDay: false,
-                backgroundColor: '#FEC0C2',
+                backgroundColor: '#FFCBCD',
                 resourceId: 1,
                 slotEventOverlap: false
             },
             {
-                title: "Cust Airbnb",
+                title: "Emily Johnson",
+                description: "Airbnb",
                 start: new Date(y, m, d+11, 15),
                 end: new Date(y, m, d+20, 11),
-                borderColor: '#FF5A5F',
+                borderColor: '#830000',
                 allDay: false,
-                backgroundColor: '#FEC0C2',
+                backgroundColor: '#FFCBCD',
                 resourceId: 1,
-                slotEventOverlap: false
-            },
-
-            //Appartement 1 | Tarifs
-            {
-                title: "63",
-                start: new Date(y, m, d+1, 0),
-                end: new Date(y, m, d+2, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-            {
-                title: "63",
-                start: new Date(y, m, d+2, 0),
-                end: new Date(y, m, d+3, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-            {
-                title: "63",
-                start: new Date(y, m, d+3, 0),
-                end: new Date(y, m, d+4, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-            {
-                title: "63",
-                start: new Date(y, m, d+4, 0),
-                end: new Date(y, m, d+5, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-            {
-                title: "63",
-                start: new Date(y, m, d+5, 0),
-                end: new Date(y, m, d+6, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-            {
-                title: "63",
-                start: new Date(y, m, d+6, 0),
-                end: new Date(y, m, d+7, 0),
-                allDay: false,
-                resourceId: "1rates",
-                slotEventOverlap: false
-            },
-
-
-            //Appartement 1 | Quantité
-            {
-                title: "1",
-                start: new Date(y, m, d+2, 0),
-                end: new Date(y, m, d+3, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+3, 0),
-                end: new Date(y, m, d+4, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+4, 0),
-                end: new Date(y, m, d+5, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+5, 0),
-                end: new Date(y, m, d+6, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+6, 0),
-                end: new Date(y, m, d+7, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+7, 0),
-                end: new Date(y, m, d+8, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+8, 0),
-                end: new Date(y, m, d+9, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+9, 0),
-                end: new Date(y, m, d+10, 0),
-                allDay: false,
-                resourceId: "1stay",
-                slotEventOverlap: false
-            },
-            {
-                title: "1",
-                start: new Date(y, m, d+10, 0),
-                end: new Date(y, m, d+11, 0),
-                allDay: false,
-                resourceId: "1stay",
                 slotEventOverlap: false
             },
 
             //Appartement 2
             {
-                title: "Cust Airbnb",
+                title: "Emily Johnson",
+                description: "Airbnb",
                 start: new Date(y, m, d-2, 15),
                 end: new Date(y, m, d+2, 11),
-                borderColor: '#FF5A5F',
+                borderColor: '#830000',
                 allDay: false,
-                backgroundColor: '#FEC0C2',
+                backgroundColor: '#FFCBCD',
                 resourceId: 2,
                 slotEventOverlap: false
             },
             {
-                title: "Customer Booking",
+                title: "Emily Johnson",
+                description: "Booking",
                 start: new Date(y, m, d+2, 13),
                 end: new Date(y, m, d+4, 11),
                 borderColor: '#003580',
                 allDay: false,
-                backgroundColor: '#8DBCFE',
+                backgroundColor: '#AACDFF',
                 resourceId: 2,
                 slotEventOverlap: false
             },
             {
-                title: "Customer Booking",
+                title: "Emily Johnson",
+                description: "Booking",
                 start: new Date(y, m, d+4, 15),
                 end: new Date(y, m, d+10, 10),
                 borderColor: '#003580',
                 allDay: false,
-                backgroundColor: '#8DBCFE',
+                backgroundColor: '#AACDFF',
                 resourceId: 2,
+                slotEventOverlap: false
+            },
+
+            //Appartement 3
+            {
+                title: "Emily Johnson",
+                description: "Direct",
+                start: new Date(y, m, d+0, 11),
+                end: new Date(y, m, d+3, 8),
+                borderColor: '#046C00', // Couleur de la bordure
+                allDay: false,
+                backgroundColor: '#98E8BA',
+                resourceId: 3,
+                slotEventOverlap: false
+            },
+            {
+                title: "Emily Johnson",
+                description: "Direct",
+                start: new Date(y, m, d+3, 12),
+                end: new Date(y, m, d+8, 8),
+                borderColor: '#046C00', // Couleur de la bordure
+                allDay: false,
+                backgroundColor: '#98E8BA',
+                resourceId: 3,
+                slotEventOverlap: false
+            },
+            {
+                title: "Emily Johnson",
+                description: "Airbnb",
+                start: new Date(y, m, d+10, 15),
+                end: new Date(y, m, d+13, 11),
+                borderColor: '#830000',
+                allDay: false,
+                backgroundColor: '#FFCBCD',
+                resourceId: 3,
                 slotEventOverlap: false
             },
         ],
@@ -258,8 +169,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }*/
             return {
                 html: '<div class="fc-content">' +
-                        '<div class="fc-title" style="text-align: center;">' + arg.event.title + '</div>' +
-                    '</div>'
+                              '<div class="fc-title" style="margin-left: 10px; font-weight: lighter;">' + arg.event.title + '</div>' +
+                              '<div class="fc-description" style="padding-top: 3px; font-size: 100%; margin-left: 10px;">' + arg.event.extendedProps.description + '</div>' +
+                            '</div>'
             };
         },
         
